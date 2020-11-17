@@ -2,6 +2,7 @@ FROM alpine
 
 LABEL MAINTAINER="flyingtiantian <tianxuejin2014@hotmail.com>"
 
+ENV TIMEZONE Asia/Shanghai
 ENV DOWNLOAD_PATH "/download"
 
 RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
