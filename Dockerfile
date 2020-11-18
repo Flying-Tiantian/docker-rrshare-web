@@ -17,7 +17,7 @@ RUN rm rrshareweb_linux_2.20.tar.gz
 RUN echo -e "{\n    \"port\" : 3001,\n    \"logpath\" : \"\",\n    \"logqueit\" : false,\n    \"loglevel\" : 1,\n    \"logpersistday\" : 2,\n    \"defaultsavepath\" : \"$DOWNLOAD_PATH\"\n}" > /rrshareweb/conf/rrshare.json
 
 WORKDIR /
-VOLUME [$DOWNLOAD_PATH]
+VOLUME $DOWNLOAD_PATH
 EXPOSE 3001
 
 ENTRYPOINT ["/bin/sh"]
